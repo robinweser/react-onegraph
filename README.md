@@ -19,9 +19,11 @@ npm i --save react-onegraph
 
 ## Usage
 
-The package exports 3 parts: **AuthProvider**, **AuthConsumer** and **AuthContext**. Read on to see how they're used.
+The package exports 3 parts: **AuthProvider**, **AuthConsumer** and **AuthContext**.
 
-In order to get started, we have to wrap our application with an **AuthProvider**. It manages an instance of [OneGraphAuth](https://www.onegraph.com/docs/logging_users_in_and_out.html) client and passes relevant data using the React Context API.
+----
+
+To get started, we have to wrap our application with an **AuthProvider**. It manages an instance of [OneGraphAuth](https://www.onegraph.com/docs/logging_users_in_and_out.html) client and passes relevant data using the React Context API.
 
 It takes only the OneGraph *appId* as props.
 
@@ -39,18 +41,17 @@ ReactDOM.render(
 ```
 
 Now one can use the **AuthConsumer** to get a status per service, request headers and login/logout methods.
-
 It implements the render props pattern and automatically updates and rerenders the status and headers on login/logout calls.
 
 #### Render Props
 
 | Property | Type | Description |
 | ----- | --- | ---- |
-| appId | *(string)* | The OneGraph *appId* that was passed to the AuthProvider. |
+| appId | *(string)* | The OneGraph *appId* that was passed to the AuthProvider |
 | status | *(Object)*  | A map of service-status pairs |
-| headers |*(Object)*  |  The Authentication headers object that are used for API requests |
+| headers |*(Object)*  |  The authentication headers object that is used for API requests |
 | login | *(Function)* |  A function that accepts a service name and an optional status callback |
-| logout | *(Function)* |  A function that accepts a service name and an optional status callback |
+| logout | *(Function)* |  A function that accepts a service name and an optional status callbac |
 
 ```javascript
 import { AuthConsumer } from 'react-onegraph'
