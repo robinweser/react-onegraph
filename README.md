@@ -145,6 +145,6 @@ const OneGraphWithHooks = {
 
 
 ## License
-react-onegraph is licensed under the MIT License.<br>
-Documentation is licensed under Creative Common License.<br>
-Created with ♥ by [@rofrischmann](http://twitter.com/rofrischmann).
+react-onegraph is licensed under the [MIT License](http://opensource.org/licenses/MIT).<br>
+Documentation is licensed under [Creative Common License](http://creativecommons.org/licenses/by/4.0/).<br>
+Created with ♥ by [@rofrischmann](http://rofrischmann.de) and all the great contributors.
