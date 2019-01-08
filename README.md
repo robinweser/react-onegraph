@@ -87,7 +87,7 @@ import { AuthConsumer } from 'react-onegraph'
 
 const YouTubeAuthentication = (
   <AuthConsumer>
-    {({ status, login, logout }) => {
+    {({ login }) => {
       const loginYoutube = () => login('youtube', () => console.log("Logged in!"))
 
       return (
@@ -128,7 +128,7 @@ const OneGraphQuery = (
 ```
 
 ## useContext hook
-> **Note**: Using hooks requires **react@16.7.0-alpha**.
+> **Note**: Using hooks requires react @16.7.0-alpha.1 or @16.7.0-alpha.2
 
 ```javascript
 import { useContext } from 'react'
@@ -145,6 +145,6 @@ const OneGraphWithHooks = {
 
 
 ## License
-react-onegraph is licensed under the MIT License.
-Documentation is licensed under Creative Common License.
+react-onegraph is licensed under the MIT License.<br>
+Documentation is licensed under Creative Common License.<br>
 Created with ♥ by @rofrischmann.
