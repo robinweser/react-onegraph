@@ -1,6 +1,7 @@
-# React bindings for OneGraph
+# React Bindings for OneGraph's Authentication Client
 
-Useful React components for working with [OneGraph](http://onegraph.com/) and React. It wraps the [OneGraphAuth](https://www.onegraph.com/docs/logging_users_in_and_out.html) API automatically rerendering on Authentication changes.
+Useful React components for working with [OneGraph](http://onegraph.com/) and React.<br>
+It wraps the [OneGraphAuth](https://www.onegraph.com/docs/logging_users_in_and_out.html) API automatically rerendering on Authentication changes.
 
 <img alt="npm downloads" src="https://img.shields.io/npm/dm/react-onegraph.svg"> <img alt="gzipped size" src="https://img.shields.io/bundlephobia/minzip/react-onegraph.svg?colorB=4c1&label=gzipped%20size"> <img alt="npm version" src="https://badge.fury.io/js/react-onegraph.svg">
 
