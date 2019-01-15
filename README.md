@@ -1,7 +1,9 @@
 > The repository was [moved to the official OneGraph organisation](https://github.com/OneGraph/onegraph-client/tree/master/packages/react-onegraph).
-# React bindings for OneGraph
 
-Useful React components for working with [OneGraph](http://onegraph.com/) and React. It wraps the [OneGraphAuth](https://www.onegraph.com/docs/logging_users_in_and_out.html) API automatically rerendering on Authentication changes.
+# React Bindings for OneGraph's Authentication Client
+
+Useful React components for working with [OneGraph](http://onegraph.com/) and React.<br>
+It wraps the [OneGraphAuth](https://www.onegraph.com/docs/logging_users_in_and_out.html) API automatically rerendering on Authentication changes.
 
 <img alt="npm downloads" src="https://img.shields.io/npm/dm/react-onegraph.svg"> <img alt="gzipped size" src="https://img.shields.io/bundlephobia/minzip/react-onegraph.svg?colorB=4c1&label=gzipped%20size"> <img alt="npm version" src="https://badge.fury.io/js/react-onegraph.svg">
 
@@ -19,9 +21,11 @@ npm i --save react-onegraph
 
 ## Usage
 
-The package exports 3 parts: **AuthProvider**, **AuthConsumer** and **AuthContext**. Read on to see how they're used.
+The package exports 3 parts: **AuthProvider**, **AuthConsumer** and **AuthContext**.
 
-In order to get started, we have to wrap our application with an **AuthProvider**. It manages an instance of [OneGraphAuth](https://www.onegraph.com/docs/logging_users_in_and_out.html) client and passes relevant data using the React Context API.
+----
+
+To get started, we have to wrap our application with an **AuthProvider**. It manages an instance of [OneGraphAuth](https://www.onegraph.com/docs/logging_users_in_and_out.html) client and passes relevant data using the React Context API.
 
 It takes only the OneGraph *appId* as props.
 
@@ -39,18 +43,17 @@ ReactDOM.render(
 ```
 
 Now one can use the **AuthConsumer** to get a status per service, request headers and login/logout methods.
-
 It implements the render props pattern and automatically updates and rerenders the status and headers on login/logout calls.
 
 #### Render Props
 
 | Property | Type | Description |
 | ----- | --- | ---- |
-| appId | *(string)* | The OneGraph *appId* that was passed to the AuthProvider. |
+| appId | *(string)* | The OneGraph *appId* that was passed to the AuthProvider |
 | status | *(Object)*  | A map of service-status pairs |
-| headers |*(Object)*  |  The Authentication headers object that are used for API requests |
+| headers |*(Object)*  |  The authentication headers object that is used for API requests |
 | login | *(Function)* |  A function that accepts a service name and an optional status callback |
-| logout | *(Function)* |  A function that accepts a service name and an optional status callback |
+| logout | *(Function)* |  A function that accepts a service name and an optional status callbac |
 
 ```javascript
 import { AuthConsumer } from 'react-onegraph'
@@ -86,7 +89,7 @@ import { AuthConsumer } from 'react-onegraph'
 
 const YouTubeAuthentication = (
   <AuthConsumer>
-    {({ status, login, logout }) => {
+    {({ login }) => {
       const loginYoutube = () => login('youtube', () => console.log("Logged in!"))
 
       return (
@@ -127,7 +130,7 @@ const OneGraphQuery = (
 ```
 
 ## useContext hook
-> **Note**: Using hooks requires **react@16.7.0-alpha**.
+> **Note**: Using hooks requires react @16.7.0-alpha.1 or @16.7.0-alpha.2
 
 ```javascript
 import { useContext } from 'react'
@@ -144,6 +147,6 @@ const OneGraphWithHooks = {
 
 
 ## License
-react-onegraph is licensed under the MIT License.
-Documentation is licensed under Creative Common License.
-Created with ♥ by @rofrischmann.
+react-onegraph is licensed under the [MIT License](http://opensource.org/licenses/MIT).<br>
+Documentation is licensed under [Creative Common License](http://creativecommons.org/licenses/by/4.0/).<br>
+Created with ♥ by [@rofrischmann](http://rofrischmann.de) and all the great contributors.
