@@ -1,3 +1,4 @@
+> The repository was [moved to the official OneGraph organisation](https://github.com/OneGraph/onegraph-client/tree/master/packages/react-onegraph).
 # React bindings for OneGraph
 
 Useful React components for working with [OneGraph](http://onegraph.com/) and React. It wraps the [OneGraphAuth](https://www.onegraph.com/docs/logging_users_in_and_out.html) API automatically rerendering on Authentication changes.
